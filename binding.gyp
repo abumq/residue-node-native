@@ -6,13 +6,34 @@
         "src/residue_native.cc"
       ],
       "libraries": [
-        "-lresidue-static"
+        "-lresidue"
       ],
       "defines": [
-        "ELPP_THREAD_SAFE",
-        "_HAS_EXCEPTIONS=1"
+        "ELPP_THREAD_SAFE"
       ],
-      "include_dirs": ["<!(node -e \"require('nan')\")"]
-    }
-  ]
+      "include_dirs": [
+        "include", 
+        "<!(node -e \"require('nan')\")"
+      ],
+      "cflags!": [
+        "-fno-exceptions"
+      ],
+      "cflags_cc!": [
+        "-fno-exceptions"
+        "-Wall"
+      ],
+      "conditions": [
+        ['OS=="linux"', {
+          "libraries": [
+            "-Llibs/linux"
+          ],
+        }],
+        ['OS=="mac"', {
+          "libraries": [
+            "-Llibs/darwin"
+          ],
+        }],
+      ],
+    },
+  ],
 }
