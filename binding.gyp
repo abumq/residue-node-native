@@ -3,7 +3,7 @@
     {
       "target_name": "residue_native",
       "sources": [
-        "residue_native.cc"
+        "src/residue_native.cc"
       ],
       "libraries": [
         "-lresidue-static"
