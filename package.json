@@ -1,6 +1,6 @@
 {
   "name": "residue-native",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Residue native bindings for Node.js",
   "main": "residue.js",
   "scripts": {
