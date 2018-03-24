@@ -14,5 +14,4 @@ npm install --save residue-native
 ## Build (for developers)
 ```
 node-gyp rebuild
-node test.js
 ```
