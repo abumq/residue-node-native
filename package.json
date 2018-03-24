@@ -7,9 +7,27 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "node-gyp rebuild"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muflihun/residue-node-native.git"
+  },
+  "author": "Muflihun Labs <info@muflihun.com>",
+  "license": "Apache-2.0",
   "gypfile": true,
+  "keywords": [
+    "residue",
+    "logging",
+    "remote-logging",
+    "residue-client",
+    "async-logging",
+    "efficient-logging",
+    "easylogging",
+    "easylogging++"
+  ],
+  "bugs": {
+    "url": "https://github.com/muflihun/residue-node-native/issues"
+  },
+  "homepage": "https://github.com/muflihun/residue-node-native#readme",
   "dependencies": {
     "nan": "^2.10.0"
   }
