@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "residue-native": "0.0.1"
+    "residue-native": "^0.0.2"
   }
 }
