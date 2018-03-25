@@ -6,7 +6,7 @@
 [![GitHub license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/muflihun/residue-node/blob/master/LICENSE)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/MuflihunDotCom/25)
 
-### DO NOT USE IN PRODUCTION YET
+### DO NOT USE IN PRODUCTION YET USE [residue-node](https://github.com/muflihun/residue-node) INSTEAD
 
 ## Install
 ```
