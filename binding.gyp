@@ -12,7 +12,6 @@
         "ELPP_THREAD_SAFE"
       ],
       "include_dirs": [
-        "include", 
         "<!(node -e \"require('nan')\")"
       ],
       "cflags!": [
