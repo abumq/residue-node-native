@@ -22,18 +22,6 @@
         "-fno-exceptions"
         "-Wall"
       ],
-      "conditions": [
-        ['OS=="linux"', {
-          "libraries": [
-            "-Llibs/linux"
-          ],
-        }],
-        ['OS=="mac"', {
-          "libraries": [
-            "-Llibs/darwin"
-          ],
-        }],
-      ],
     },
   ],
 }
