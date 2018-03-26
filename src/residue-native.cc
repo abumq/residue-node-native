@@ -50,7 +50,7 @@ NAN_METHOD(Connect)
     Residue::reconnect();
 }
 
-NAN_METHOD(writeLog) {
+NAN_METHOD(WriteLog) {
     String::Utf8Value paramLoggerId(info[0]->ToString());
     String::Utf8Value paramFile(info[1]->ToString());
     String::Utf8Value paramLine(info[2]->ToString());
