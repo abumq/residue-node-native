@@ -50,6 +50,16 @@ NAN_METHOD(Connect)
     Residue::reconnect();
 }
 
+NAN_METHOD(Disconnect)
+{
+    Residue::disconnect();
+}
+
+NAN_METHOD(IsConnected)
+{
+    Residue::connected();
+}
+
 NAN_METHOD(WriteLog) {
     String::Utf8Value paramLoggerId(info[0]->ToString());
     String::Utf8Value paramFile(info[1]->ToString());
@@ -90,6 +100,8 @@ NAN_MODULE_INIT(InitAll)
     DEFINE_FN(configure, Configure);
     DEFINE_FN(load_connection, LoadConnection);
     DEFINE_FN(connect, Connect);
+    DEFINE_FN(disconnect, Disconnect);
+    DEFINE_FN(is_connected, IsConnected);
     DEFINE_FN(write_log, WriteLog);
     #undef DEFINE_FN
 }
