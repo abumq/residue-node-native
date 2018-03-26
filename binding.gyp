@@ -1,25 +1,18 @@
 {
   "targets": [
     {
-      "target_name": "residue_native",
+      "target_name": "residue-native-binding",
       "sources": [
-        "src/residue_native.cc"
+        "src/residue-native.cc"
       ],
       "libraries": [
         "-lresidue"
       ],
       "defines": [
-        "ELPP_THREAD_SAFE"
+        "ELPP_THREAD_SAFE",
       ],
       "include_dirs": [
         "<!(node -e \"require('nan')\")"
-      ],
-      "cflags!": [
-        "-fno-exceptions"
-      ],
-      "cflags_cc!": [
-        "-fno-exceptions"
-        "-Wall"
       ],
     },
   ],
