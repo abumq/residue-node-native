@@ -1,7 +1,7 @@
 {
   "targets": [
     {
-      "target_name": "residue-native-binding",
+      "target_name": "residue-native",
       "sources": [
         "src/residue-native.cc"
       ],
