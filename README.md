@@ -13,31 +13,8 @@ This module goes hand-in-hand with [residue-node](https://www.npmjs.com/package/
 npm install --save residue-native
 ```
 
-## Sample
-API is same as residue-node. The only difference is include `residue/lib/native` instead of `residue`
-
-```
-const residue = require('residue/lib/native');
-const logger = residue.getLogger('sample-app');
-
-console.log(`Library version: ${residue.version()}`);
-
-const confFile = 'client.conf.json';
-if (residue.loadConfiguration(confFile)) {
-    residue.connect();
-}
-
-logger.info('simple log');
-
-logger.info('array %s', [1, 2, 3]);
-
-var person = { 'name': 'Adam', 'age': 960, }
-logger.info('obj %s', person);
-
-logger.info('null %s', null);
-
-logger.info('undefined %s', undefined);
-```
+## API
+Please see [Native Binding](https://github.com/muflihun/residue-node/blob/master/README.md#native-binding) section
 
 ## License
 ```
