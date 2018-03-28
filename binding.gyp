@@ -10,6 +10,7 @@
       ],
       "defines": [
         "ELPP_THREAD_SAFE",
+        "_GLIBCXX_USE_CXX11_ABI=0"
       ],
       "xcode_settings": {
         "OTHER_CFLAGS": [
