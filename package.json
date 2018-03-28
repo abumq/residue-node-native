@@ -1,6 +1,6 @@
 {
   "name": "residue-native",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Residue native bindings for Node.js",
   "main": "build/Release/residue-native",
   "scripts": {
@@ -30,6 +30,6 @@
   "homepage": "https://github.com/muflihun/residue-node-native#readme",
   "dependencies": {
     "nan": "^2.10.0",
-    "libresidue": "^2.1.2"
+    "libresidue": "^2.1.2-2"
   }
 }
