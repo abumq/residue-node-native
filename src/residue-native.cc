@@ -80,13 +80,13 @@ NAN_METHOD(WriteLog) {
     el::base::type::VerboseLevel vl = 0;
     
     if (info[5]->IsNumber()) {
-        level = static_cast<el::Level>(To<unsigned int>(info[5]).FromJust());
+        level = static_cast<el::Level>(To<el::base::type::EnumType>(info[5]).FromJust());
     }
     if (info[2]->IsNumber() && info[2]->IsNumber()) {
-        line = static_cast<el::base::type::LineNumber>(To<unsigned int>(info[2]).FromJust());
+        line = static_cast<el::base::type::LineNumber>(To<el::base::type::EnumType>(info[2]).FromJust());
     }
     if (info[6]->IsNumber()) {
-        vl = static_cast<el::base::type::VerboseLevel>(To<unsigned int>(info[6]).FromJust());
+        vl = static_cast<el::base::type::VerboseLevel>(To<el::base::type::EnumType>(info[6]).FromJust());
     }
 
     el::base::Writer(level,
