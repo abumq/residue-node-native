@@ -31,6 +31,13 @@ NAN_METHOD(Version)
     info.GetReturnValue().Set(String::NewFromUtf8(Isolate::GetCurrent(), Residue::version().c_str()));
 }
 
+NAN_METHOD(RegisterLogger)
+{
+    String::Utf8Value loggerIdParam(info[0]->ToString());
+    std::string loggerId(*loggerIdParam);
+    el::Loggers::getLogger(loggerId, true);
+}
+
 NAN_METHOD(Configure)
 {
     String::Utf8Value jsonParam(info[0]->ToString());
@@ -103,6 +110,7 @@ NAN_MODULE_INIT(InitAll)
     DEFINE_FN(disconnect, Disconnect);
     DEFINE_FN(is_connected, IsConnected);
     DEFINE_FN(write_log, WriteLog);
+    DEFINE_FN(register_logger, RegisterLogger);
     #undef DEFINE_FN
 }
 
