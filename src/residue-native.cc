@@ -33,22 +33,25 @@ NAN_METHOD(Version)
 
 NAN_METHOD(RegisterLogger)
 {
-    String::Utf8Value loggerIdParam(info[0]->ToString());
-    std::string loggerId(*loggerIdParam);
+    const std::string loggerId = *Nan::Utf8String(info[0]);
+    
+    if (!el::Logger::isValidId(loggerId)) {
+        return Nan::ThrowError(Nan::Error("Invalid logger ID. Allowed characters are alpha-numeric, hyphen, underscore or dot"));
+    }
     el::Loggers::getLogger(loggerId, true);
 }
 
 NAN_METHOD(Configure)
 {
-    String::Utf8Value jsonParam(info[0]->ToString());
-    std::string json(*jsonParam);
+    const std::string json = *Nan::Utf8String(info[0]);
+
     Residue::loadConfigurationFromJson(json);
 }
 
 NAN_METHOD(LoadConnection)
 {
-    String::Utf8Value jsonParam(info[0]->ToString());
-    std::string json(*jsonParam);
+    const std::string json = *Nan::Utf8String(info[0]);
+
     Residue::loadConnectionFromJson(json);
 }
 
@@ -68,20 +71,14 @@ NAN_METHOD(IsConnected)
 }
 
 NAN_METHOD(WriteLog) {
-    String::Utf8Value paramLoggerId(info[0]->ToString());
-    String::Utf8Value paramFile(info[1]->ToString());
-    String::Utf8Value paramLine(info[2]->ToString());
-    String::Utf8Value paramFunc(info[3]->ToString());
-    String::Utf8Value paramMsg(info[4]->ToString());
-    String::Utf8Value paramLevel(info[5]->ToString());
-    String::Utf8Value paramVLevel(info[6]->ToString());
-    std::string loggerId(*paramLoggerId);
-    std::string file(*paramFile);
-    std::string line(*paramLine);
-    std::string func(*paramFunc);
-    std::string msg(*paramMsg);
-    std::string level(*paramLevel);
-    std::string vlevel(*paramVLevel);
+    const std::string loggerId = *Nan::Utf8String(info[0]);
+    const std::string file = *Nan::Utf8String(info[1]);
+    const std::string line = *Nan::Utf8String(info[2]);
+    const std::string func = *Nan::Utf8String(info[3]);
+    const std::string msg = *Nan::Utf8String(info[4]);
+    const std::string level = *Nan::Utf8String(info[5]);
+    const std::string vlevel = *Nan::Utf8String(info[6]);
+
     el::base::type::LineNumber lineNumb = 0;
     if (line != "undefined" && line != "null") {
         lineNumb = stoi(line);
