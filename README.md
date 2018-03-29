@@ -9,12 +9,20 @@
 This module goes hand-in-hand with [residue-node](https://www.npmjs.com/package/residue). You must have [C++ library](https://github.com/muflihun/residue-cpp) already installed on the system.
 
 ## Install
+First, you need to install libresidue binary (dynamic)
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/muflihun/residue-cpp/master/install.sh)"
+```
+
+Once dynamic library is available you can install the package, that will eventually build the native module.
+
 ```
 npm install --save residue-native
 ```
 
 ## API
-Please see [Native Binding](https://github.com/muflihun/residue-node/blob/master/README.md#native-binding) section
+Please see [Native Binding](https://github.com/muflihun/residue-node/blob/master/README.md#native-binding) section for API and usage.
 
 ## License
 ```
