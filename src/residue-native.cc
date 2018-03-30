@@ -67,7 +67,7 @@ NAN_METHOD(Disconnect)
 
 NAN_METHOD(IsConnected)
 {
-    Residue::connected();
+    info.GetReturnValue().Set(Residue::connected() ? Nan::True() : Nan::False());
 }
 
 NAN_METHOD(WriteLog) {
