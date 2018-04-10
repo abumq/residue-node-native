@@ -8,6 +8,10 @@
 
 This module goes hand-in-hand with [residue-node](https://www.npmjs.com/package/residue). You must have [C++ library](https://github.com/muflihun/residue-cpp) already installed on the system.
 
+## Requirements
+
+ * Node 7+
+
 ## Install
 First, you need to install libresidue binary (dynamic)
 
