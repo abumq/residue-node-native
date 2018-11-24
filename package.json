@@ -1,6 +1,6 @@
 {
   "name": "residue-native",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "Residue native bindings for Node.js",
   "main": "build/Release/residue-native",
   "scripts": {
@@ -9,9 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/muflihun/residue-node-native.git"
+    "url": "git+https://github.com/zuhd-org/residue-node-native.git"
   },
-  "author": "Muflihun Labs <info@muflihun.com>",
+  "author": "Zuhd Web Services <opensource@zuhd.org>",
   "license": "Apache-2.0",
   "gypfile": true,
   "keywords": [
@@ -25,9 +25,9 @@
     "easylogging++"
   ],
   "bugs": {
-    "url": "https://github.com/muflihun/residue-node-native/issues"
+    "url": "https://github.com/zuhd-org/residue-node-native/issues"
   },
-  "homepage": "https://github.com/muflihun/residue-node-native#readme",
+  "homepage": "https://github.com/zuhd-org/residue-node-native#readme",
   "dependencies": {
     "nan": "^2.10.0",
     "libresidue": "^2.1.3"

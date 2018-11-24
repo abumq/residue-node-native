@@ -4,14 +4,14 @@
 //
 //  Part of Residue Node.js client for Residue logging server
 //
-//  Copyright (C) 2017-present Muflihun Labs
+//  Copyright (C) 2017-present Zuhd Web Services
 //  Copyright (C) 2017-present @abumusamq
 //
 //  https://muflihun.com/
-//  https://muflihun.github.io/residue/
-//  https://github.com/muflihun/residue-node-native/
+//  https://zuhd.org
+//  https://github.com/zuhd-org/residue-node-native/
 //
-//  See https://github.com/muflihun/residue-node-native/blob/master/LICENSE
+//  See https://github.com/zuhd-org/residue-node-native/blob/master/LICENSE
 //  for licensing information
 //
 
@@ -34,7 +34,7 @@ NAN_METHOD(Version)
 NAN_METHOD(RegisterLogger)
 {
     const std::string loggerId = *Nan::Utf8String(info[0]);
-    
+
     if (!el::Logger::isValidId(loggerId)) {
         return Nan::ThrowError(Nan::Error("Invalid logger ID. Allowed characters are alpha-numeric, hyphen, underscore or dot"));
     }
@@ -78,7 +78,7 @@ NAN_METHOD(WriteLog) {
     el::Level level = el::Level::Info;
     el::base::type::LineNumber line = 0;
     el::base::type::VerboseLevel vl = 0;
-    
+
     if (info[5]->IsNumber()) {
         level = static_cast<el::Level>(To<el::base::type::EnumType>(info[5]).FromJust());
     }
