@@ -4,14 +4,14 @@
 //
 //  Part of Residue Node.js client for Residue logging server
 //
-//  Copyright (C) 2017-present Zuhd Web Services
+//  Copyright (C) 2017-present Amrayn Web Services
 //  Copyright (C) 2017-present @abumusamq
 //
 //  https://muflihun.com/
-//  https://zuhd.org
-//  https://github.com/zuhd-org/residue-node-native/
+//  https://amrayn.com
+//  https://github.com/amrayn/residue-node-native/
 //
-//  See https://github.com/zuhd-org/residue-node-native/blob/master/LICENSE
+//  See https://github.com/amrayn/residue-node-native/blob/master/LICENSE
 //  for licensing information
 //
 
